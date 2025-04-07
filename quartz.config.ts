@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "zh-CN",
     baseUrl: "alpraline1999.github.io/Alpraline",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "images"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
