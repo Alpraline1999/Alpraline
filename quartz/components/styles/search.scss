@@ -1,26 +1,26 @@
 @use "../../styles/variables.scss" as *;
 
 .search {
-  min-width: fit-content;
-  max-width: 14rem;
-  @media all and ($mobile) {
-    flex-grow: 0.3;
+  min-width: fit-content; // 搜索栏的最小宽度，适应内容宽度
+  max-width: 18rem; // 搜索栏的最大宽度
+  @media all and ($mobile) { // 移动端
+    flex-grow: 0.3; // 
   }
 
   & > .search-button {
-    background-color: var(--lightgray);
-    border: none;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: inherit;
-    height: 2rem;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    text-align: inherit;
-    cursor: pointer;
-    white-space: nowrap;
-    width: 100%;
+    background-color: var(--lightgray); // 颜色，边框颜色
+    border: none; // 无边框
+    border-radius: 4px; // 圆角
+    font-family: inherit; // 字体
+    font-size: inherit; // 字体大小
+    height: 2rem; // 高度
+    padding: 0; // 内边距
+    display: flex; // 弹性布局
+    align-items: center; // 垂直居中
+    text-align: inherit; // 文本对齐方式
+    cursor: pointer; // 鼠标指针样式
+    white-space: nowrap; // 不换行
+    width: 100%; // 宽度
     justify-content: space-between;
 
     & > p {
