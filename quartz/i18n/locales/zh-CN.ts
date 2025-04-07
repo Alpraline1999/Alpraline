@@ -22,25 +22,25 @@ export default {
       quote: "引用",
     },
     backlinks: {
-      title: "反向链接",
-      noBacklinksFound: "无法找到反向链接",
+      title: "🔗 反向链接",
+      noBacklinksFound: "",
     },
     themeToggle: {
       lightMode: "亮色模式",
       darkMode: "暗色模式",
     },
     explorer: {
-      title: "探索",
+      title: "📓 所有笔记",
     },
     footer: {
-      createdWith: "Created with",
+      createdWith: "Powered By",
     },
     graph: {
-      title: "关系图谱",
+      title: "🕸️ 关系图谱",
     },
     recentNotes: {
-      title: "最近的笔记",
-      seeRemainingMore: ({ remaining }) => `查看更多${remaining}篇笔记 →`,
+      title: "⌛ 最近更新",
+      seeRemainingMore: ({ remaining }) => `查看其他${remaining}篇笔记 →`,
     },
     transcludes: {
       transcludeOf: ({ targetSlug }) => `包含${targetSlug}`,
@@ -51,10 +51,14 @@ export default {
       searchBarPlaceholder: "搜索些什么",
     },
     tableOfContents: {
-      title: "目录",
+      title: "📜 目录",
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes}分钟阅读`,
+    },
+    pageNavigation: {
+      prevPage: "上一页",
+      nextPage: "下一页",
     },
   },
   pages: {
@@ -68,11 +72,11 @@ export default {
       home: "返回首页",
     },
     folderContent: {
-      folder: "文件夹",
+      folder: "📂 文件夹",
       itemsUnderFolder: ({ count }) => `此文件夹下有${count}条笔记。`,
     },
     tagContent: {
-      tag: "标签",
+      tag: "🏷 标签",
       tagIndex: "标签索引",
       itemsUnderTag: ({ count }) => `此标签下有${count}条笔记。`,
       showingFirst: ({ count }) => `显示前${count}个标签。`,

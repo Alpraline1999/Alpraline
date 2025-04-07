@@ -1,6 +1,19 @@
 ---
-title: Welcome to Quartz
+title: Alpraline
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+在这个后现代的世界，一切都被解构，一切都在变化。
+
+过去我所接受的教育，所掌握的知识，所建立的观念，如今已经破陋不堪。
+
+我感受到了前所未有的焦虑和恐慌。
+
+我不知道它来自何处，也不知道我将去向何方。
+
+Alpraline 是一种抗焦虑的药物，能够缓解焦虑紧张和恐慌。
+
+但我想药物是不够的，我需要一种更强大的力量，一种能够让我从这个荒谬的世界中走出来的力量。
+
+阅读，学习，思考，写作，行动。
+
+我在寻找属于我的 Alpraline，或者自己成为 Alpraline。

@@ -558,12 +558,13 @@ video {
 }
 
 .spacer {
-  flex: 2 1 auto;
+  flex: 1 1 auto;
 }
 
 div:has(> .overflow) {
+  display: flex;
+  overflow-y: auto;
   max-height: 100%;
-  overflow-y: hidden;
 }
 
 ul.overflow,

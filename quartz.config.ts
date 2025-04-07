@@ -8,15 +8,15 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
+    pageTitle: "Alpraline",
     pageTitleSuffix: "",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    locale: "zh-CN",
+    baseUrl: "alpraline1999.github.io/Alpraline",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -25,30 +25,48 @@ const config: QuartzConfig = {
       typography: {
         header: "Schibsted Grotesk",
         body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
-          light: "#faf8f8",
-          lightgray: "#e5e5e5",
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
+          // 页面背景     faf8f8
+          light: "#fffcf0",
+          // 边框        e5e5e5
+          lightgray: "#e0e0e0",
+          // 图形链接，粗边框        b8b8b8            
+          gray: "#b2b2b2", 
+          // 正文文本     4e4e4e
+          darkgray: "#1b2222",
+          // 标题文本，图标
           dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          // 链接，关系图谱当前节点   284b63
+          secondary: "#1a77d9",
+          // 悬停，访问关系图谱节点   84a59d
+          tertiary: "#9bc3ef",
+          // 内部链接背景，高亮文本，高亮代码行  143, 159, 169
+          highlight: "rgba(240,240,240, 0.15)",
+          // markdown 高亮文本背景  fff23688
+          textHighlight: "#fff07f88",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
+          // 页面背景        161618
+          light: "#2e3440",
+          // 边框           393639
+          lightgray: "#474d57",
+          // 图形链接, 粗边框 646464
+          gray: "#6d717a",
+          // 正文文本        d4d4d4
+          darkgray: "#cbd1dd",
+          // 标题文本，图标   
           dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          // 链接，关系图谱当前节点  7b97aa
+          secondary: "#42bed6",
+          // 悬停，访问关系图谱节点  84a59d
+          tertiary: "#76ecea",
+          // 内部链接背景，高亮文本，高亮代码行  143, 159, 169
+          highlight: "rgba(59, 66,82 , 0.15)",
+          // markdown 高亮文本背景 b3aa0288
+          textHighlight: "#ebcb8b88",
         },
       },
     },
@@ -68,7 +86,10 @@ const config: QuartzConfig = {
       }),
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
-      Plugin.TableOfContents(),
+      Plugin.TableOfContents({ 
+        maxDepth: 4 ,
+        collapseByDefault: true,
+      }),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
