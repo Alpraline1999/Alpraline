@@ -2,8 +2,9 @@
 created: 2025-04-06
 modified: 2025-04-08
 draft: false
-title: Quartz 个人主页搭建
-tags: [个人主页, PKM, Quartz]
+tags:
+  - PKM/个人主页
+  - Quartz
 ---
 
 >[!info]

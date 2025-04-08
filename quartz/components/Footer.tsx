@@ -32,7 +32,7 @@ export default ((opts?: Options) => {
           {" © "}{year}{" / "}
           <a href={ob} class="external"><Favicon href={ob} />Obsidian</a>
           {" / "}
-          <a href={ghp} class="external"><Favicon href={ghp} />GitHub Page</a>
+          <a href={ghp} class="external"><Favicon href={ghp} />GitHub Pages</a>
         </p>
       </footer >
     )
