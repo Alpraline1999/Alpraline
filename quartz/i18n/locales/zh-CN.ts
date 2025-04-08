@@ -22,24 +22,24 @@ export default {
       quote: "引用",
     },
     backlinks: {
-      title: "🔗 反向链接",
-      noBacklinksFound: "",
+      title: "反向链接",
+      noBacklinksFound: "⭕ 本文无反向链接",
     },
     themeToggle: {
       lightMode: "亮色模式",
       darkMode: "暗色模式",
     },
     explorer: {
-      title: "📓 所有笔记",
+      title: "所有笔记",
     },
     footer: {
       createdWith: "Powered By",
     },
     graph: {
-      title: "🕸️ 关系图谱",
+      title: "关系图谱",
     },
     recentNotes: {
-      title: "⌛ 最近更新",
+      title: "最近更新",
       seeRemainingMore: ({ remaining }) => `查看其他${remaining}篇笔记 →`,
     },
     transcludes: {
@@ -51,7 +51,7 @@ export default {
       searchBarPlaceholder: "搜索些什么",
     },
     tableOfContents: {
-      title: "📜 目录",
+      title: "目录",
     },
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes}分钟阅读`,

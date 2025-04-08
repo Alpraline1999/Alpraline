@@ -108,7 +108,7 @@ button.desktop-explorer {
   }
 }
 
-.explorer-content {
+.explorer-content { // 文件夹树的所有内容
   list-style: none;
   overflow: hidden;
   overflow-y: auto;
@@ -150,7 +150,7 @@ button.desktop-explorer {
   }
 }
 
-.folder-container {
+.folder-container { // 文件夹容器，包括文件夹树的文字内容
   flex-direction: row;
   display: flex;
   align-items: center;
@@ -211,7 +211,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 }
 
 .explorer {
-  @media all and ($mobile) {
+  @media all and ($mobile) {    
     &.collapsed {
       flex: 0 0 34px;
 
@@ -251,7 +251,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       visibility: hidden;
     }
 
-    .mobile-explorer {
+    .mobile-explorer { // 移动端资源管理器按钮
       margin: 0;
       padding: 5px;
       z-index: 101;

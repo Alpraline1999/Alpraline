@@ -7,7 +7,7 @@ tags: [个人主页, PKM, Quartz]
 ---
 
 >[!info]
-本文的大部分内容来自 [Quartz 主页](https://quartz.jzhao.xyz/) ，我对其进行了一些整理。
+>本文的大部分内容来自 [Quartz 主页](https://quartz.jzhao.xyz/) ，我对其进行了一些整理。
 
 ## 前言
 
