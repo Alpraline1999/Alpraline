@@ -68,7 +68,7 @@ type TweenNode = {
   stop: () => void
 }
 
-async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
+export async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
   removeAllChildren(graph)

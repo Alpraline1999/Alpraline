@@ -1,6 +1,12 @@
+import { registerEscapeHandler } from "./util"
+import { getFullSlug } from "../../util/path"
+import { renderGraph } from "./graph.inline"
+
+
 // 全局变量跟踪状态
 let activeModal: HTMLElement | null = null
 let currentCleanup: (() => void) | null = null
+let globalGraphCleanups: (() => void)[] = []
 
 function setupFloatingButtons() {
   // 清理之前的设置
@@ -137,7 +143,21 @@ function setupFloatingButtons() {
   }
 
   // 处理图谱显示
-  function toggleGraph() {
+  async function toggleGraph() {
+    const slug = getFullSlug(window)
+    for (const container of containers) {
+      container.classList.add("active")
+      const sidebar = container.closest(".sidebar") as HTMLElement
+      if (sidebar) {
+        sidebar.style.zIndex = "1"
+      }
+
+      const graphContainer = container.querySelector(".global-graph-container") as HTMLElement
+      registerEscapeHandler(container, hideGlobalGraph)
+      if (graphContainer) {
+        globalGraphCleanups.push(await renderGraph(graphContainer, slug))
+      }
+    }
     const graphComponent = document.querySelector('.graph') as HTMLElement
     if (!graphComponent) return
 
@@ -167,6 +187,25 @@ function setupFloatingButtons() {
     } else {
       // 隐藏图谱
       graphComponent.classList.remove('active')
+    }
+  }
+  
+  function cleanupGlobalGraphs() {
+    for (const cleanup of globalGraphCleanups) {
+      cleanup()
+    }
+    globalGraphCleanups = []
+  }
+
+  const containers = [...document.getElementsByClassName("global-graph-outer")] as HTMLElement[]
+  function hideGlobalGraph() {
+    cleanupGlobalGraphs()
+    for (const container of containers) {
+      container.classList.remove("active")
+      const sidebar = container.closest(".sidebar") as HTMLElement
+      if (sidebar) {
+        sidebar.style.zIndex = ""
+      }
     }
   }
 

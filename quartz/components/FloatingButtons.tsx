@@ -1,6 +1,6 @@
 import {QuartzComponentConstructor, QuartzComponentProps} from "./types"
 import style from "./styles/floatingButtons.scss"
-import script from "./scripts/floatingButtons.inline.ts"
+import script from "./scripts/floatingButtons.inline"
 import {classNames} from "../util/lang"
 
 interface FloatingButtonsOptions {

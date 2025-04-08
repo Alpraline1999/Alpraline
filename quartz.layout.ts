@@ -55,7 +55,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.RecentNotes({
       limit: 5,
-      showTags: true,
+      showTags: false,
     }),
   ],
   afterBody: [

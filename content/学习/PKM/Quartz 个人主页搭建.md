@@ -1,9 +1,9 @@
 ---
-created: 2025-04-06-周日 19:01:53
-updated: 2025-04-08-周二 02:52:02
-tags: [个人主页, PKM, Quartz]
+created: 2025-04-08
+modified: 2025-04-08
 draft: false
-title: 个人主页搭建：Obsidian + Quartz 4 + GitHub Page
+title: Quartz 个人主页搭建
+tags: [个人主页, PKM, Quartz]
 ---
 
 >[!info]
@@ -449,7 +449,7 @@ plugins: {
     }
     ```
 
-![Obsidian + Quartz 4 + GitHub 个人主页搭建-2025-04-07-000424.png](D:/02_Study/03_Notes/quartz/content/images\Obsidian + Quartz 4 + GitHub 个人主页搭建-2025-04-07-000424.png)
+![image](/static/images/Quartz_PersonalPage_8d0044.png)
 
 ### 组件列表 Components List
 
