@@ -42,7 +42,7 @@ const config: QuartzConfig = {
           // 链接，关系图谱当前节点   284b63
           secondary: "#1a77a9",
           // 悬停，访问关系图谱节点   84a59d
-          tertiary: "#1a77a988",
+          tertiary: "#42bed6",
           // 内部链接背景，高亮文本，高亮代码行  143, 159, 169
           highlight: "rgba(240,240,240, 0.15)",
           // markdown 高亮文本背景  fff23688

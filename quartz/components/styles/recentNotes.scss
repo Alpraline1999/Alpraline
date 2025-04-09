@@ -4,22 +4,33 @@
     font-size: 1rem;
   }
 
-  & > ul.recent-ul {
+  & > ul.recent-ul { // ul
     list-style: none;
     margin-top: 1rem;
     padding-left: 0;
 
-    & > li {
+    & > li { // li
       margin: 0.5rem 0;
-      .section > .desc > h3 > a {
+      padding: 0;
+      
+      .section > .desc > h3 > a { // title
         background-color: transparent;
         font-size: 1rem;
       }
 
-      .section > .meta {
-        margin: 0 0 0.5rem 0;
+      .section > .meta { // meta 
+        margin: 0;
         opacity: 0.6;
         font-size: 0.9rem;
+      }
+
+      .section > .tags > li > a{ // tags
+        margin: 0;
+        padding: 0;
+        gap: 0;
+        opacity: 0.8;
+        font-size: 0.9rem;
+        color: rgb(40, 158, 119);
       }
     }
   }
