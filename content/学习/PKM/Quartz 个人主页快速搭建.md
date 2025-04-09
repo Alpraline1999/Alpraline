@@ -1,10 +1,8 @@
 ---
 created: 2025-04-06
-modified: 2025-04-08
+modified: 2025-04-09
 draft: false
-tags:
-  - PKM/个人主页
-  - Quartz
+tags: [PKM/个人主页, Quartz]
 ---
 
 >[!info]
