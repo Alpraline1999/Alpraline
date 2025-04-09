@@ -68,7 +68,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageNavigation(), // 显示页面导航组件（通常是上一篇和下一篇文章的链接）
     Component.ConditionalRender({ // 如果页面不是主页
       component: Component.RecentNotes({ // 显示最近的笔记
-        limit: 5,
+        limit: 7,
         showTags: false,
       }),
       condition: (page) => page.fileData.slug !== "index",
@@ -103,11 +103,11 @@ export const defaultListPageLayout: PageLayout = {
         position: 'right',
     })),
   ],
-  right: [],
-  afterBody: [
+  right: [
     Component.RecentNotes({ // 显示最近的笔记
-      limit: 5,
+      limit: 7,
       showTags: false,
-    }),
+    }),],
+  afterBody: [
   ]
 }
