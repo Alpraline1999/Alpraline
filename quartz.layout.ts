@@ -95,9 +95,9 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer({ // 资源管理器组件，用于显示文件夹和文件的树形结构
-      folderClickBehavior: "link", // 单击文件夹时会发生什么（“link”在单击时导航到文件夹页面,或单击“collapse”折叠文件夹）
+      folderClickBehavior: "collapse", // 单击文件夹时会发生什么（“link”在单击时导航到文件夹页面,或单击“collapse”折叠文件夹）
       folderDefaultState: "collapsed", // 文件夹的默认状态 ("collapsed" or "open")
-      useSavedState: true, // 是否使用本地存储来保存资源管理器的“状态”（打开哪些文件夹）
+      useSavedState: false, // 是否使用本地存储来保存资源管理器的“状态”（打开哪些文件夹）
     }),
     Component.DesktopOnly(Component.FloatingButtons({ // 桌面端显示的目录组件
         position: 'right',
