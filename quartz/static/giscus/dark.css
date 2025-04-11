@@ -4,96 +4,180 @@
  */
 
 main {
+  /* 代码注释的颜色 */
   --color-prettylights-syntax-comment: #8b949e;
+  /* 常量（如数字、布尔值等）的颜色 */
   --color-prettylights-syntax-constant: #79c0ff;
+  /* 实体（如类名、函数名等）的颜色 */
   --color-prettylights-syntax-entity: #d2a8ff;
+  /* 存储修饰符和导入语句的颜色 */
   --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  /* 实体标签（如 HTML 标签）的颜色 */
   --color-prettylights-syntax-entity-tag: #7ee787;
+  /* 关键字（如 if、else、function 等）的颜色 */
   --color-prettylights-syntax-keyword: #ff7b72;
+  /* 字符串（如 "hello world"）的颜色 */
   --color-prettylights-syntax-string: #a5d6ff;
+  /* 变量的颜色 */
   --color-prettylights-syntax-variable: #ffa657;
+  /* 不匹配的括号高亮颜色 */
   --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  /* 无效或非法文本的颜色 */
   --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  /* 无效或非法文本的背景颜色 */
   --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  /* 回车符显示文本的颜色 */
   --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  /* 回车符显示背景的颜色 */
   --color-prettylights-syntax-carriage-return-bg: #b62324;
+  /* 正则表达式字符串的颜色 */
   --color-prettylights-syntax-string-regexp: #7ee787;
+  /* 列表标记（如 Markdown 列表的 - 或 *）的颜色 */
   --color-prettylights-syntax-markup-list: #f2cc60;
+  /* 标题（如 Markdown 标题 # ）的颜色 */
   --color-prettylights-syntax-markup-heading: #1f6feb;
+  /* 斜体文本（如 Markdown 的 *text* ）的颜色 */
   --color-prettylights-syntax-markup-italic: #c9d1d9;
+  /* 粗体文本（如 Markdown 的 **text** ）的颜色 */
   --color-prettylights-syntax-markup-bold: #c9d1d9;
+  /* 删除文本（如 Markdown 的 ~~text~~ ）的颜色 */
   --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  /* 删除文本的背景颜色 */
   --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  /* 插入文本的颜色 */
   --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  /* 插入文本的背景颜色 */
   --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  /* 更改文本的颜色 */
   --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  /* 更改文本的背景颜色 */
   --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  /* 忽略文本的颜色 */
   --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  /* 忽略文本的背景颜色 */
   --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  /* 差异范围元数据的颜色 */
   --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  /* 角括号高亮的颜色 */
   --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  /* SublimeLinter  gutter 标记的颜色 */
   --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  /* 常量引用链接的颜色 */
   --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  /* 按钮文本的颜色 */
   --color-btn-text: #d4d4d4; /* --darkgray */
+  /* 按钮背景的颜色 */
   --color-btn-bg: #161618; /* --light */
+  /* 按钮边框的颜色 */
   --color-btn-border: rgb(240, 246, 252 / 10%); /* --dark */
+  /* 按钮阴影的颜色 */
   --color-btn-shadow: 0 0 transparent;
+  /* 按钮内阴影的颜色 */
   --color-btn-inset-shadow: 0 0 transparent;
+  /* 鼠标悬停时按钮背景的颜色 */
   --color-btn-hover-bg: #30363d;
+  /* 鼠标悬停时按钮边框的颜色 */
   --color-btn-hover-border: #8b949e;
+  /* 按钮激活时背景的颜色 */
   --color-btn-active-bg: hsl(212deg 12% 18% / 100%);
+  /* 按钮激活时边框的颜色 */
   --color-btn-active-border: #6e7681;
+  /* 按钮被选中时背景的颜色 */
   --color-btn-selected-bg: #161b22;
+  /* 主按钮文本的颜色 */
   --color-btn-primary-text: #fff;
+  /* 主按钮背景的颜色 */
   --color-btn-primary-bg: #84a59d; /* --tertiary */
+  /* 主按钮边框的颜色 */
   --color-btn-primary-border: rgb(240, 246, 252 / 10%); /* --dark */
+  /* 主按钮阴影的颜色 */
   --color-btn-primary-shadow: 0 0 transparent;
+  /* 主按钮内阴影的颜色 */
   --color-btn-primary-inset-shadow: 0 0 transparent;
+  /* 鼠标悬停时主按钮背景的颜色 */
   --color-btn-primary-hover-bg: #7b97aa; /* --secondary */
+  /* 鼠标悬停时主按钮边框的颜色 */
   --color-btn-primary-hover-border: rgb(240, 246, 252 / 10%); /* --dark */
+  /* 主按钮被选中时背景的颜色 */
   --color-btn-primary-selected-bg: #7b97aa; /* --secondary */
+  /* 主按钮被选中时阴影的颜色 */
   --color-btn-primary-selected-shadow: 0 0 transparent;
+  /* 主按钮禁用时文本的颜色 */
   --color-btn-primary-disabled-text: rgba(33, 32, 32, 0.5);
+  /* 主按钮禁用时背景的颜色 */
   --color-btn-primary-disabled-bg: rgb(35 134 54 / 60%);
+  /* 主按钮禁用时边框的颜色 */
   --color-btn-primary-disabled-border: rgb(240 246 252 / 10%);
+  /* 操作列表项默认悬停时背景的颜色 */
   --color-action-list-item-default-hover-bg: rgb(177 186 196 / 12%);
+  /* 分段控件背景的颜色 */
   --color-segmented-control-bg: rgb(110 118 129 / 10%);
+  /* 分段控件按钮背景的颜色 */
   --color-segmented-control-button-bg: #0d1117;
+  /* 分段控件按钮被选中时边框的颜色 */
   --color-segmented-control-button-selected-border: #6e7681;
+  /* 默认前景色 选中文字颜色 输入文字颜色*/
   --color-fg-default: #ebebec; /* --dark */
+  /* 柔和前景色 未选中文字颜色*/
   --color-fg-muted: #d4d4d4; /* --darkgray */
+  /* 细微前景色 */
   --color-fg-subtle: #d4d4d4; /* --darkgray */
-  --color-canvas-default: #0d1117;
-  --color-canvas-overlay: #161b22;
-  --color-canvas-inset: #010409;
+  /* 默认画布背景色 输入框外框(write 框) */
+  --color-canvas-default: #1e222b;
+  /* 覆盖画布背景色 上边框 */
+  --color-canvas-overlay: #282d37;
+  /* 嵌入画布背景色 输入框 */
+  --color-canvas-inset: #242831;
+  /* 细微画布背景色 */
   --color-canvas-subtle: #161b22;
+  /* 默认边框颜色 内部边框颜色 */
   --color-border-default: #30363d;
+  /* 柔和边框颜色 */
   --color-border-muted: #21262d;
+  /* 中性柔和颜色 */
   --color-neutral-muted: rgb(110 118 129 / 40%);
+  /* 强调前景色 */
   --color-accent-fg: #2f81f7;
+  /* 强调重点颜色 */
   --color-accent-emphasis: #1f6feb;
+  /* 强调柔和颜色 */
   --color-accent-muted: rgb(56 139 253 / 40%);
+  /* 强调细微颜色 */
   --color-accent-subtle: rgb(56 139 253 / 10%);
+  /* 成功状态前景色 */
   --color-success-fg: #3fb950;
+  /* 注意状态前景色 */
   --color-attention-fg: #d29922;
+  /* 注意状态柔和颜色 */
   --color-attention-muted: rgb(187 128 9 / 40%);
+  /* 注意状态细微颜色 */
   --color-attention-subtle: rgb(187 128 9 / 15%);
+  /* 危险状态前景色 */
   --color-danger-fg: #f85149;
+  /* 危险状态柔和颜色 */
   --color-danger-muted: rgb(248 81 73 / 40%);
+  /* 危险状态细微颜色 */
   --color-danger-subtle: rgb(248 81 73 / 10%);
+  /* Primer 内阴影颜色 */
   --color-primer-shadow-inset: 0 0 transparent;
+  /* 灰度色阶 7 的颜色 */
   --color-scale-gray-7: #21262d;
+  /* 蓝色色阶 8 的颜色 */
   --color-scale-blue-8: #0c2d6b;
 
   /*! Extensions from @primer/css/alerts/flash.scss */
+  /* 社交反应按钮悬停时背景的颜色 */
   --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+  /* 已反应的社交反应按钮悬停时背景的颜色 */
   --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 }
 
 main .pagination-loader-container {
+  /* 分页加载器容器的背景图片 */
   background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
 }
 
 main .gsc-loading-image {
+  /* Giscus 加载图片的背景图片 */
   background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
 }

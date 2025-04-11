@@ -47,15 +47,15 @@ export const defaultContentPageLayout: PageLayout = {
     }),
   ],
   right: [
-    Component.ConditionalRender({ // 如果页面不是主页
-      component: Component.DesktopOnly(Component.Graph()), // 桌面端显示的图谱组件
-      condition: (page) => page.fileData.slug !== "index",
-    }),
     Component.DesktopOnly(Component.TableOfContents()), // 桌面端显示的目录组件
     Component.ConditionalRender({ // 如果页面不是主页
       component: Component.Backlinks({ // 显示文章的反向链接
         hideWhenEmpty: false,
       }),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({ // 如果页面不是主页
+      component: Component.DesktopOnly(Component.Graph()), // 桌面端显示的图谱组件
       condition: (page) => page.fileData.slug !== "index",
     }),
     Component.ConditionalRender({ // 如果页面是主页
@@ -69,10 +69,27 @@ export const defaultContentPageLayout: PageLayout = {
   afterBody: [
     Component.PageNavigation(), // 显示页面导航组件（通常是上一篇和下一篇文章的链接）
     Component.ConditionalRender({ // 如果页面不是主页
-      component: Component.RecentNotes({ // 显示最近的笔记
-        limit: 7,
-        showTags: true,
-      }),
+      // component: Component.RecentNotes({ // 显示最近的笔记
+      //   limit: 7,
+      //   showTags: true,
+      // }),
+      component: Component.Comments({
+        provider: 'giscus',
+        options: {
+          // from data-repo
+          repo: 'alpraline1999/Alpraline',
+          // from data-repo-id
+          repoId: 'R_kgDOOU4Jhw',
+          // from data-category
+          category: 'Announcements',
+          // from data-category-id
+          categoryId: 'DIC_kwDOOU4Jh84CpAZl',
+          inputPosition: 'top',
+          // themeUrl: "https://${cfg.baseUrl}/static/giscus", // corresponds to quartz/static/giscus/
+          // lightTheme: "light", // corresponds to light-theme.css in quartz/static/giscus/
+          // darkTheme: "dark", // corresponds to dark-theme.css quartz/static/giscus/
+        }
+      }), // 显示评论组件
       condition: (page) => page.fileData.slug !== "index",
     }),
   ],
