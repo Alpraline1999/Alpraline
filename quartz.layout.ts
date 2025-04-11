@@ -81,6 +81,9 @@ export const defaultContentPageLayout: PageLayout = {
           // from data-category-id
           categoryId: 'DIC_kwDOOU4Jh84CpAZl',
           inputPosition: 'top',
+          mapping: 'title',
+          strict: false,
+          reactionsEnabled: true,
           // themeUrl: "https://${cfg.baseUrl}/static/giscus", // corresponds to quartz/static/giscus/
           // lightTheme: "light", // corresponds to light-theme.css in quartz/static/giscus/
           // darkTheme: "dark", // corresponds to dark-theme.css quartz/static/giscus/
