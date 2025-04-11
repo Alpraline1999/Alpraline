@@ -90,7 +90,7 @@ export const defaultContentPageLayout: PageLayout = {
     }),
     Component.ConditionalRender({ // 如果页面不是主页
       component: Component.RecentNotes({ // 显示最近的笔记
-        limit: 7,
+        limit: 5,
         showTags: true,
       }),
       condition: (page) => page.fileData.slug !== "index",
