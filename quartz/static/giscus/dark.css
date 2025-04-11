@@ -124,12 +124,12 @@ main {
   --color-fg-subtle: #d4d4d4; /* --darkgray */
   /* 默认画布背景色 输入框外框(write 框) */
   --color-canvas-default: #1e222b;
-  /* 覆盖画布背景色 上边框 */
+  /* 覆盖画布背景色 */
   --color-canvas-overlay: #282d37;
   /* 嵌入画布背景色 输入框 */
   --color-canvas-inset: #242831;
-  /* 细微画布背景色 */
-  --color-canvas-subtle: #161b22;
+  /* 细微画布背景色 上边框 */
+  --color-canvas-subtle: #242831;
   /* 默认边框颜色 内部边框颜色 */
   --color-border-default: #30363d;
   /* 柔和边框颜色 */

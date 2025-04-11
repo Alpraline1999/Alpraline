@@ -69,10 +69,6 @@ export const defaultContentPageLayout: PageLayout = {
   afterBody: [
     Component.PageNavigation(), // 显示页面导航组件（通常是上一篇和下一篇文章的链接）
     Component.ConditionalRender({ // 如果页面不是主页
-      // component: Component.RecentNotes({ // 显示最近的笔记
-      //   limit: 7,
-      //   showTags: true,
-      // }),
       component: Component.Comments({
         provider: 'giscus',
         options: {
@@ -90,6 +86,13 @@ export const defaultContentPageLayout: PageLayout = {
           // darkTheme: "dark", // corresponds to dark-theme.css quartz/static/giscus/
         }
       }), // 显示评论组件
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({ // 如果页面不是主页
+      component: Component.RecentNotes({ // 显示最近的笔记
+        limit: 7,
+        showTags: true,
+      }),
       condition: (page) => page.fileData.slug !== "index",
     }),
   ],
