@@ -17,6 +17,7 @@ export default ((opts?: Options) => {
     const quartz = "https://quartz.jzhao.xyz/"
     const ob = "https://obsidian.md"
     const ghp = "https://github.com/Alpraline1999/Alpraline"
+    const giscus = "https://giscus.app/zh-CN"
 
     return (
       <footer class={`${displayClass ?? ""}`}>
@@ -33,6 +34,8 @@ export default ((opts?: Options) => {
           <a href={ob} class="external"><Favicon href={ob} />Obsidian</a>
           {" / "}
           <a href={ghp} class="external"><Favicon href={ghp} />GitHub Pages</a>
+          {" / "}
+          <a href={giscus} class="external"><Favicon href={giscus} />Giscus</a>
         </p>
       </footer >
     )
