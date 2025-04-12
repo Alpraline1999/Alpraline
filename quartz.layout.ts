@@ -3,72 +3,85 @@ import * as Component from "./quartz/components"
 
 // 所有页面共享的组件
 export const sharedPageComponents: SharedLayout = {
-  head: Component.Head(),
+  head: Component.Head(), // 页面的头部组件
   header: [],
   afterBody: [],
-  footer: Component.Footer(),
-  // footer: Component.Footer({
-  //   links: {
-  //     GitHub: "https://github.com/Alpraline1999",
-  //     "Discord Community": "https://discord.gg/cRFFHYye7t",
-  //   },
-  // }),
+  footer: Component.Footer(), // 页脚组件
 }
 
 // 显示单个页面的页面的组件（例如，单个注释）
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.ConditionalRender({ // 如果页面不是主页，则显示面包屑
+    // 非主页时，面包屑
+    Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(), // 显示文章标题
-    Component.ContentMeta(), // 显示文章元数据（例如发布日期）
-    Component.TagList(), // 显示文章的标签列表
+    // 文章标题
+    Component.ArticleTitle(),
+    // 文章元数据（例如发布日期）
+    Component.ContentMeta(),
+    // 文章的标签列表
+    Component.TagList(),
   ],
   left: [
-    Component.PageTitle(), // 显示页面标题
+    // 页面标题
+    Component.PageTitle(), 
+    // 搜索框 + 深色模式切换按钮
     Component.Flex({ 
       components: [
         {
-          Component: Component.Search(), // 搜索框
+          Component: Component.Search(), 
           grow: true,
         },
-        { Component: Component.Darkmode() }, // 深色模式切换按钮
+        { Component: Component.Darkmode() }, 
       ],
     }),
-    Component.Explorer({ // 资源管理器组件，用于显示文件夹和文件的树形结构
+    // 资源管理器，用于显示文件夹和文件的树形结构
+    Component.Explorer({ 
       folderClickBehavior: "collapse", // 单击文件夹时会发生什么（“link”在单击时导航到文件夹页面,或单击“collapse”折叠文件夹）
       folderDefaultState: "collapsed", // 文件夹的默认状态 ("collapsed" or "open")
       useSavedState: true, // 是否使用本地存储来保存资源管理器的“状态”（打开哪些文件夹）
     }),
-    Component.FloatingButtons({ // 桌面端显示的浮动按钮组件
+    // 浮动导航按钮
+    Component.FloatingButtons({ 
         position: 'right',
     }),
   ],
   right: [
-    Component.DesktopOnly(Component.TableOfContents()), // 桌面端显示的目录组件
-    Component.ConditionalRender({ // 如果页面不是主页
-      component: Component.Backlinks({ // 显示文章的反向链接
+    // 桌面端，目录
+    Component.DesktopOnly(Component.TableOfContents()), 
+    // 非主页，桌面端，反向链接
+    Component.ConditionalRender({
+      condition: (page) => page.fileData.slug !== "index",
+      component: Component.DesktopOnly(Component.Backlinks({
         hideWhenEmpty: false,
-      }),
-      condition: (page) => page.fileData.slug !== "index",
+      })),
     }),
-    Component.ConditionalRender({ // 如果页面不是主页
-      component: Component.DesktopOnly(Component.Graph()), // 桌面端显示的图谱组件
+    // 非主页，桌面端，关系图谱
+    Component.ConditionalRender({
       condition: (page) => page.fileData.slug !== "index",
+      component: Component.DesktopOnly(Component.Graph()),
     }),
-    Component.ConditionalRender({ // 如果页面是主页
-      component: Component.RecentNotes({ // 显示最近的笔记
+    // 主页，桌面端，最近笔记
+    Component.ConditionalRender({ 
+      condition: (page) => page.fileData.slug == "index",
+      component: Component.DesktopOnly(Component.RecentNotes({ 
         limit: 10,
         showTags: true,
-      }),
-      condition: (page) => page.fileData.slug == "index",
+      })),
     }),
   ],
   afterBody: [
-    Component.PageNavigation(), // 显示页面导航组件（通常是上一篇和下一篇文章的链接）
-    Component.ConditionalRender({ // 如果页面不是主页
+    // 页面导航
+    Component.PageNavigation(), 
+    // 非主页，移动设备，关系图谱
+    Component.ConditionalRender({
+      condition: (page) => page.fileData.slug !== "index",
+      component: Component.MobileOnly(Component.Graph()),
+    }),
+    // 非主页，评论
+    Component.ConditionalRender({
       component: Component.Comments({
         provider: 'giscus',
         options: {
@@ -84,19 +97,25 @@ export const defaultContentPageLayout: PageLayout = {
           mapping: 'title',
           strict: false,
           reactionsEnabled: true,
-          // themeUrl: "https://${cfg.baseUrl}/static/giscus", // corresponds to quartz/static/giscus/
-          // lightTheme: "light", // corresponds to light-theme.css in quartz/static/giscus/
-          // darkTheme: "dark", // corresponds to dark-theme.css quartz/static/giscus/
         }
-      }), // 显示评论组件
+      }), 
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ConditionalRender({ // 如果页面不是主页
-      component: Component.RecentNotes({ // 显示最近的笔记
+    // 非主页，最近笔记
+    Component.ConditionalRender({
+      condition: (page) => page.fileData.slug !== "index",
+      component: Component.RecentNotes({
         limit: 5,
         showTags: true,
       }),
-      condition: (page) => page.fileData.slug !== "index",
+    }),
+    // 主页，移动设备，最近笔记
+    Component.ConditionalRender({
+      condition: (page) => page.fileData.slug == "index",
+      component: Component.MobileOnly(Component.RecentNotes({
+        limit: 10,
+        showTags: true,
+      })),
     }),
   ],
 }
@@ -123,15 +142,20 @@ export const defaultListPageLayout: PageLayout = {
       folderDefaultState: "collapsed", // 文件夹的默认状态 ("collapsed" or "open")
       useSavedState: true, // 是否使用本地存储来保存资源管理器的“状态”（打开哪些文件夹）
     }),
-    Component.FloatingButtons({ // 桌面端显示的浮动按钮组件
+    Component.FloatingButtons({ // 浮动导航按钮
         position: 'right',
     }),
   ],
   right: [
-    Component.RecentNotes({ // 显示最近的笔记
+    // 桌面端，最近笔记
+    Component.DesktopOnly(Component.RecentNotes({
       limit: 10,
       showTags: true,
-    }),],
+    })),],
   afterBody: [
-  ]
+    // 移动设备，最近笔记
+    Component.MobileOnly(Component.RecentNotes({
+      limit: 10,
+      showTags: true,
+    })),]
 }

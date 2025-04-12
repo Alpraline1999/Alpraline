@@ -1,4 +1,15 @@
 @use "../../styles/variables.scss" as *;
+@use "sass:map";
+
+.desktop-only {
+  display: block;
+}
+
+@media screen and (max-width: #{map.get($breakpoints, mobile)}) {
+  .desktop-only {
+    display: none !important;
+  }
+}
 
 .backlinks {
   flex-direction: column;
